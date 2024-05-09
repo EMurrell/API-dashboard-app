@@ -41,7 +41,7 @@ export default async function Weather() {
       : null;
   return (
     <section>
-      <div className="flex flex-col mt-4 justify-center px-6 py-4 lg:px-8 lg:py-6 bg-white/10 backdrop-blur rounded-2xl border border-white min-h-10 max-w-lg">
+      <div className="flex flex-col justify-center px-6 py-4 lg:px-8 lg:py-6 bg-white/10 backdrop-blur rounded-2xl border border-white min-h-10 max-w-lg">
         <p className="text-5xl pb-4 font-semibold bg-gradient-to-r from-sky-600 via-cyan-400 to-teal-500 inline-block text-transparent bg-clip-text">
           {city}
           <span className="text-xl ml-6">
