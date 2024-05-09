@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { Poppins, Roboto_Mono } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
 const sans = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
-const mono = Roboto_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Weather Dashboard App",
