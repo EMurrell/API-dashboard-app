@@ -11,7 +11,6 @@ async function fetchNews() {
     );
     const data = await response.json();
 
-    console.log("NEWS:", data);
     return data;
   } catch (error) {
     console.error("Error fetching weather:", error);
