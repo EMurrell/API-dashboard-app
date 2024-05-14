@@ -45,7 +45,7 @@ export default async function Weather() {
       <p className="text-5xl w-full text-center font-semibold bg-gradient-to-r from-sky-600 via-cyan-400 to-teal-500 inline-block text-transparent bg-clip-text">
         {city}
       </p>
-      <span className=" mt-2 w-full text-center text-white/60">
+      <span className="mt-1 w-full text-center text-white/60">
         {region}, {country}
       </span>
       <div className={`${mono.className} mt-4`}>
