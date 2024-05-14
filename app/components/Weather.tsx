@@ -66,11 +66,11 @@ export default async function Weather() {
             )}
           </div>
 
-          <p className="text-xs opacity-50 mt-2">
+          <p className="text-xs opacity-50 mt-1">
             Last updated on: {data.current.last_updated}
           </p>
           <div className="text-sm">
-            <div className="flex flex-col w-full justify-between gap-2  mt-3">
+            <div className="flex flex-col w-full justify-between gap-2  mt-6">
               <p>Feels like: {data.current.feelslike_c}&deg;C</p>
               <p>
                 Wind: {data.current.wind_dir} {data.current.wind_kph} km/h
