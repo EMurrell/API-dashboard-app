@@ -1,4 +1,5 @@
 import { Roboto_Mono } from "next/font/google";
+import Wrapper from "./Wrapper";
 
 const mono = Roboto_Mono({ subsets: ["latin"] });
 
@@ -31,7 +32,7 @@ export default async function News() {
   });
 
   return (
-    <section className="lg:px-8 lg:py-6 p-6  bg-white/10 backdrop-blur rounded-2xl border border-white min-h-10 max-w-lg">
+    <Wrapper>
       <p className="text-5xl pb-4 font-semibold bg-gradient-to-r from-sky-600 via-cyan-400 to-teal-500 inline-block text-transparent bg-clip-text w-full text-center">
         Latest News
       </p>
@@ -40,7 +41,8 @@ export default async function News() {
           <a
             key={article.article_id}
             href={article.link}
-            className="flex flex-col justify-center p-2  hover:bg-sky-600/30 rounded-2xl transition ease-in-out duration-300">
+            className="flex flex-col justify-center p-2  hover:bg-sky-600/30 rounded-2xl transition ease-in-out duration-300"
+          >
             <span className="text-lg line-clamp-2">{article.title}</span>
             <span className="text-[11px] text-white/60 mt-1">
               {article.pubDate}
@@ -55,6 +57,6 @@ export default async function News() {
           </a>
         ))}
       </div>
-    </section>
+    </Wrapper>
   );
 }
