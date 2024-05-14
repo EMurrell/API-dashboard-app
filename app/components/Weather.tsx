@@ -75,13 +75,11 @@ export default async function Weather() {
               <p>
                 Wind: {data.current.wind_dir} {data.current.wind_kph} km/h
               </p>
-
+              <p>Gusts: {data.current.gust_kph} km/h</p>
               <p>Humidity: {data.current.humidity}%</p>
               <p>Visibility: {data.current.vis_km}km</p>
 
-              <p>Gusts: {data.current.gust_kph} km/h</p>
               <p>UV index: {data.current.uv}</p>
-
               <p>Precip: {data.current.precip_mm}mm</p>
               <p>Pressure: {data.current.pressure_mb}mb</p>
             </div>
