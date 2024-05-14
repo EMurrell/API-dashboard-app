@@ -12,7 +12,7 @@ async function fetchWeather() {
       `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`
     );
     const data = await response.json();
-    console.log(data);
+
     return data;
   } catch (error) {
     console.error("Error fetching weather:", error);
