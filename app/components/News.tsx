@@ -37,17 +37,17 @@ export default async function News() {
         Latest News
       </p>
       <div className={mono.className}>
-        {uniqueArticles?.map((article: any) => (
+        {uniqueArticles?.slice(0, 3).map((article: any) => (
           <a
             key={article.article_id}
             href={article.link}
-            className="flex flex-col justify-center px-6 py-4  hover:bg-sky-600/30 rounded-2xl transition ease-in-out duration-300">
-            <span className="text-lg">{article.title}</span>
+            className="flex flex-col justify-center p-2  hover:bg-sky-600/30 rounded-2xl transition ease-in-out duration-300">
+            <span className="text-lg line-clamp-2">{article.title}</span>
             <span className="text-[11px] text-white/60 mt-1">
               {article.pubDate}
             </span>
 
-            <span className="text-sm mt-3 text-white/60 font-light line-clamp-3">
+            <span className="text-sm mt-3 text-white/60 font-light line-clamp-2">
               {article.description
                 ? article.description
                 : "No description available"}
