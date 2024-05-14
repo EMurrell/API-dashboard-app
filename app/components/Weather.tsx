@@ -41,18 +41,20 @@ export default async function Weather() {
       : null;
   return (
     <section>
-      <div className="flex flex-col justify-center p-6 lg:px-8 lg:py-6 bg-white/10 backdrop-blur rounded-2xl border border-white min-h-10 max-w-lg">
+      <div className="flex flex-col justify-center overflow-hidden p-6 lg:px-8 lg:py-6 bg-white/10 backdrop-blur rounded-2xl border border-white min-h-10 max-w-lg">
         <p className="text-5xl w-full text-center font-semibold bg-gradient-to-r from-sky-600 via-cyan-400 to-teal-500 inline-block text-transparent bg-clip-text">
           {city}
         </p>
         <span className=" mt-2 w-full text-center text-white/60">
           {region}, {country}
         </span>
-        <div className={`{mono.className} mt-4`}>
+        <div className={`${mono.className} mt-4`}>
           <p>Current</p>
           <div className="flex gap-3 items-center">
-            <p className="text-3xl flex">{data.current.temp_c}&deg;C</p>
-            <p className="text-3xl flex ml-auto">{conditionText}</p>
+            <p className="text-2xl sm:text-3xl flex">
+              {data.current.temp_c}&deg;C
+            </p>
+            <p className="text-2xl sm:text-3xl flex ml-auto">{conditionText}</p>
             {conditionIcon && (
               // eslint-disable-next-line @next/next/no-img-element
               <img
@@ -68,21 +70,18 @@ export default async function Weather() {
             Last updated on: {data.current.last_updated}
           </p>
           <div className="text-sm">
-            <div className="flex w-full justify-between gap-2  mt-2">
+            <div className="flex flex-col w-full justify-between gap-2  mt-3">
               <p>Feels like: {data.current.feelslike_c}&deg;C</p>
               <p>
                 Wind: {data.current.wind_dir} {data.current.wind_kph} km/h
               </p>
-            </div>{" "}
-            <div className="flex w-full justify-between gap-2  mt-2">
+
               <p>Humidity: {data.current.humidity}%</p>
               <p>Visibility: {data.current.vis_km}km</p>
-            </div>
-            <div className="flex w-full justify-between gap-2 mt-2">
+
               <p>Gusts: {data.current.gust_kph} km/h</p>
               <p>UV index: {data.current.uv}</p>
-            </div>{" "}
-            <div className="flex w-full justify-between gap-2  mt-2">
+
               <p>Precip: {data.current.precip_mm}mm</p>
               <p>Pressure: {data.current.pressure_mb}mb</p>
             </div>

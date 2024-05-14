@@ -41,7 +41,7 @@ export default async function News() {
           <a
             key={article.article_id}
             href={article.link}
-            className="flex flex-col justify-center mb-2 px-6 py-4  hover:bg-sky-600/30 rounded-2xl transition ease-in-out duration-300">
+            className="flex flex-col justify-center px-6 py-4  hover:bg-sky-600/30 rounded-2xl transition ease-in-out duration-300">
             <span className="text-lg">{article.title}</span>
             <span className="text-[11px] text-white/60 mt-1">
               {article.pubDate}
@@ -52,7 +52,7 @@ export default async function News() {
                 ? article.description
                 : "No description available"}
             </span>
-            <span className="w-full h-0.5 bg-white/60 mt-2"></span>
+            <span className="w-full h-0.5 bg-white/60 mt-6"></span>
           </a>
         ))}
       </div>
